@@ -16,7 +16,7 @@ int main()
 		
 		board(); //prints jeopardy board
 		jep(); //jeopardy game with questions
-		finaljep(int pts1, int pts2);		//plays final Jepoardy round with last question 
+		finaljep(int [] pts);		//plays final Jepoardy round with last question 
 		break;
 		
 		case 2:
@@ -87,7 +87,7 @@ void board(void);
 
 int jep(void);
 {
-	return pts1, pts2;
+	return;
 }
 
 void finaljep(int pts1, int pts2);
