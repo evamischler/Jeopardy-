@@ -91,7 +91,7 @@ int jep(void);
 	return;
 }
 
-void finaljep(int pts1, int pts2);
+void finaljep(int [] pts);
 {
 	
 }
