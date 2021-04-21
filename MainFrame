@@ -17,6 +17,7 @@ int main()
 		board(); //prints jeopardy board
 		jep(); //jeopardy game with questions
 		finaljep(int [] pts);		//plays final Jepoardy round with last question 
+		
 		break;
 		
 		case 2:
