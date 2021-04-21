@@ -4,6 +4,7 @@
 
 int main()
 {
+	
 	//prompts the user to select a game choice. 
 	printf("Welcome to the Game Show App for Pitt! This game show actually features a few games.\n The first game involves an online Jeopardy about Pitt. The second is a game of chance and luck. For information on Jeopardy, please press 1. For information on the second app, please press 2. To exit this app, please press 3.");
 	int gameOptions;//defines the variable of the selected choice for the user 	
@@ -12,10 +13,20 @@ int main()
 	{
 		case 1:
 		printf("Jeopardy: Pitt Edition. is a gameshow set up much like the real Jeopardy! with Alex Trebek. This game features trivia and information about the University of Pittsburgh.\n There is a minimum of 2 teams/players and a maximum of 4. The app cycles the trivia through each team and quizzes your knowledge about Pitt. At the end, you may wager your points on difficult questions.");
+		
+		board(); //prints jeopardy board
+		jep(); //jeopardy game with questions
+		finaljep(int pts1, int pts2);		//plays final Jepoardy round with last question 
 		break;
+		
 		case 2:
-		printf("This game is called Jake's Game, named after our very own engineer, Jake Higgins. Before you ask, no Jake is NOT short for Jacob. Jakes game is a game of chance... JAKE YOU WRITE THIS PART.");
+		printf("This game is called Jake's Game, named after our very own engineer, Jake Higgins. Before you ask, no Jake is NOT short for Jacob. Jakes game is a game of chance based on the gameshow \"Let's make a deal\".");
+		
+		prize = randdoor(); //calls function that decides which of the three doors the prize is behind
+		chancegame(int prize);  //calls function that plays game using number obtained from randdoor function
+		
 		break;
+		
 		case 3:
 		printf("Goodbye");
 		break;
@@ -23,4 +34,63 @@ int main()
 		printf("Ah it's a trap! You didn't follow the rules! please exit and try again.");
 	}
 	return 0;
+}
+
+//jakegame functions
+int randdoor(void)
+{
+	//generates random number between 1 and 3
+	int prize;
+	prize = (rand() % (3 - 1 + 1)) + 1;
+	
+	return prize;
+}
+
+void chancegame(int prize);
+{
+	//runs gameshow
+	int choice;
+	char swit;
+	int doors[3];
+	doors[prize-1] = 1;
+	
+	printf("\nThere are three doors. Behind one door is a new car and behind the other two doors is nothing");
+	printf("\nWhich door would you like to choose?(1-3)");
+	scanf("%d", &choice);
+	
+	//one of the doors not chosen will be opened.
+	
+	printf("The host has opened door#%d. Would you like to switch the door you have chosen?(y/n)" , choice);
+	scanf(" %c", &swit);
+	
+	if(choice == prize)
+	{
+		printf("\nYou Win!");
+	}
+	else
+	{
+		printf(\nYou lose!");
+	}
+	
+	if(doors[0]) doors[1]=doors[2]=0;
+        else{ door[1] = (!(rand()%2)) ? 1: 0; doors[2] = (!doors[1]) ? 1: 0; }
+        choice = rand()%3;
+	
+	if(((!(doors[((choice+1)%3)])) && (doors[((choice+2)%3)])) || (!(doors[((choice+2)%3)]) && (door[((choice+1)%3)]))) winsbyswitch++;
+}
+
+//jeopardy functions
+void board(void);
+{
+	
+}
+
+int jep(void);
+{
+	return pts1, pts2;
+}
+
+void finaljep(int pts1, int pts2);
+{
+	
 }
