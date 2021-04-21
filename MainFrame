@@ -87,6 +87,9 @@ int jep(void);
 	int cat, val;
 	printf("\nWelcome to Jeopardy!");
 	
+	int [] board;
+	for(
+	
 	printf("\nPick a category(1-5): ");
 	scanf("%d", &cat);
 	printf("\nPick a point value");
