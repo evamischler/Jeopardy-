@@ -14,9 +14,9 @@ int main()
 		case 1:
 		printf("Jeopardy: Pitt Edition. is a gameshow set up much like the real Jeopardy! with Alex Trebek. This game features trivia and information about the University of Pittsburgh.\n There is a minimum of 2 teams/players and a maximum of 4. The app cycles the trivia through each team and quizzes your knowledge about Pitt. At the end, you may wager your points on difficult questions.");
 		
-		board(); //prints jeopardy board
 		jep(); //jeopardy game with questions
-		finaljep(int [] pts);		//plays final Jepoardy round with last question 
+		finaljep(int [] pts);		//plays final Jepoardy round with last question
+		winner(); //function that displays winner and point values
 		
 		break;
 		
@@ -81,17 +81,26 @@ void chancegame(int prize);
 }
 
 //jeopardy functions
-void board(void);
+
+int jep(void);
+{
+	int cat, val;
+	printf("\nWelcome to Jeopardy!");
+	
+	printf("\nPick a category(1-5): ");
+	scanf("%d", &cat);
+	printf("\nPick a point value");
+	scanf("%d", &val);
+	
+	
+}
+
+void finaljep(int [] pts);
 {
 	
 }
 
-int jep(void);
-{
-	return;
-}
-
-void finaljep(int [] pts);
+void winner(void);
 {
 	
 }
